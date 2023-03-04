@@ -149,6 +149,18 @@ gap: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.a5:hover{
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
 }
 .a10{
     background: #00474B;
@@ -158,6 +170,18 @@ gap: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.a10:hover{
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
 }
 .a15{
     background: #00474B;
@@ -167,6 +191,18 @@ gap: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.a15:hover{
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
 }
 .a25{
     background: #00474B;
@@ -176,7 +212,20 @@ gap: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
 }
+.a25:hover{
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
+
 .a50{
     background: #00474B;
     border-radius: 5px;
@@ -185,8 +234,20 @@ gap: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
 }
-.custum{
+.a50:hover{
+    background: #9FE8DF;
+    color: #00474B;
+    cursor: pointer;
+}
+/* .custum{
     background: #F3F9FA;
 border-radius: 5px;
 width: 117px;
@@ -194,60 +255,44 @@ width: 117px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.span1{
     font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 36px;
-text-align: right;
-color: #547878;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #547878;
+} */
+.costumInput:hover{
+    background: #F3F9FA;
+border: 2px solid #26C2AE;
+cursor: pointer;
 }
-.span2{
+.costumInput{
+    /* background-color: #F3F9FA; */
+    border: 0px solid #F3F9FA;
+    border-color: #F3F9FA;
+    background: #F3F9FA;
     font-family: 'Space Mono';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 36px;
     text-align: center;
-    color: #FFFFFF;
+    color: #547878;
+    width: 118px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.span3{
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: #FFFFFF;
-}
-.span4{
-    font-family: 'Space Mono';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 36px;
-text-align: center;
-color: #FFFFFF;
-}
-.span5{
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: #FFFFFF;
-}
-.span6{
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: #FFFFFF;
+.costumInput:focus {
+    outline-color: #F3F9FA;
+  }
+  .costumInput::-webkit-outer-spin-button,
+.costumInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .div3{
     height: 80px;
@@ -301,4 +346,16 @@ align-items: center;
 .personInput::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.bottomInput:hover{
+    cursor: pointer;
+    background: #F3F9FA;
+border: 2px solid #26C2AE;
+border-radius: 5px;
+}
+.personInput:hover{
+    cursor: pointer;
+}
+.input:hover{
+    cursor: pointer;
 }
