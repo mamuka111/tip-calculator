@@ -69,8 +69,8 @@ color: #5E7A7D;
     border-radius: 5px;
     background: #F3F9FA;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;  
+      align-items: center;
 }
 .inputBar:hover{
     cursor: pointer;
@@ -79,7 +79,7 @@ border: 2px solid #26C2AE;
 border-radius: 5px;
 }
 .input{
-    width: 320px;
+    width: 310px;
     height: 36px;
     background-color: #F3F9FA;
     border: 0px solid #F3F9FA;
@@ -247,29 +247,14 @@ gap: 14px;
     color: #00474B;
     cursor: pointer;
 }
-/* .custum{
-    background: #F3F9FA;
-border-radius: 5px;
-width: 117px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: right;
-    color: #547878;
-} */
+
 .costumInput:hover{
     background: #F3F9FA;
 border: 2px solid #26C2AE;
 cursor: pointer;
+border-radius: 5px;
 }
 .costumInput{
-    /* background-color: #F3F9FA; */
     border: 0px solid #F3F9FA;
     border-color: #F3F9FA;
     background: #F3F9FA;
@@ -285,6 +270,7 @@ cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 .costumInput:focus {
     outline-color: #F3F9FA;
@@ -312,7 +298,7 @@ color: #5E7A7D;
     background: #F3F9FA;
 border-radius: 5px;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
 }
 .personDiv{
@@ -323,7 +309,7 @@ align-items: center;
     justify-content: center
 }
 .personInput{
-    width: 319px;
+    width: 310px;
     height: 36px;
     background-color: #F3F9FA;
     border: 0px solid #F3F9FA;
@@ -336,8 +322,8 @@ align-items: center;
     text-align:end;
     color: #00474B;
     mix-blend-mode: normal;
-    /* opacity: 0.35; */
     display: flex;
+
 }
 .personInput:focus {
     outline-color: #F3F9FA;
@@ -358,4 +344,127 @@ border-radius: 5px;
 }
 .input:hover{
     cursor: pointer;
+}
+.card3{
+    height: 280px;
+    width: 405px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.card4{
+    width: 405px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.p1{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+
+}
+.p2{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 19px;
+color: #7F9D9F;
+}
+.p3{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 71px;
+text-align: right;
+letter-spacing: -1px;
+color: #26C2AE;
+}
+.tipAmount{
+    width: 150px;
+}
+.money{
+    width: 150px;
+}
+.together{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.together2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.p4{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+}
+.p5{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 13px;
+line-height: 19px;
+color: #7F9D9F;
+}
+.total{
+    width: 150px;
+}
+.p6{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 71px;
+    text-align: right;
+    letter-spacing: -1px;
+    color: #26C2AE;
+}
+.money2{
+width: 150px;
+}
+.reset{
+    background: #0D686D;
+border-radius: 5px;
+width: 333px;
+height: 48px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.reset:hover{
+    background: #9FE8DF;
+border-radius: 5px;
+cursor: pointer;
+}
+.reset:hover .p7{
+opacity: 1;
+}
+.p7{
+    font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+color: #00474B;
+mix-blend-mode: normal;
+opacity: 0.35;
+}
+.help{
+    height: 80px;
+    width: 333px;
 }
