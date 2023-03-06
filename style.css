@@ -10,7 +10,6 @@ body{
 }
 html{
     font-family: 'Space Mono', monospace;
-
 }
 .bodyDiv{
     height: 304px;
@@ -467,4 +466,12 @@ opacity: 0.35;
 .help{
     height: 80px;
     width: 333px;
+}
+.p8{
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
