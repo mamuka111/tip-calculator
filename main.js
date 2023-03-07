@@ -25,14 +25,37 @@ personInput.addEventListener("input", function () {
   calculateTip();
 });
 
+let cvladi;
 insidePercents.forEach((element) => {
+ 
+      // element.style.color = "black"
+      console.log(element)
+     
   element.addEventListener("click", function () {
+    console.log(element)
+    
+    cvladi = element.innerHTML
     tipAmount.innerHTML = element.innerHTML;
     totalBill.innerHTML = element.innerHTML;
     customTipInput.value = "";
     customInput = 0;
     calculateTip();
+    // if(element.innerHTML === cvladi ){
+    //   element.style.color = "red"
+    //   console.log(cvladi)
+    //   console.log(element.innerHTML)
+    //   }
+
+    element.className = "active"
+    console.log(cvladi);
+    insidePercents.forEach((item)=>{
+     if(item.innerHTML !== cvladi){
+      item.className = "insidepercents"
+     } 
+     
+    })
   });
+ 
 });
 
 resetButton.addEventListener("click", function () {
