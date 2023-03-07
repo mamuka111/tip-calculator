@@ -140,7 +140,7 @@ gap: 14px;
     display: flex;
     gap: 14px;
 }
-.a5{
+/* .insidepercents{
     background: #00474B;
     border-radius: 5px;
     width: 117px;
@@ -156,12 +156,12 @@ gap: 14px;
     text-align: center;
     color: #FFFFFF;
 }
-.a5:hover{
+.insidepercents:hover{
     background: #9FE8DF;
     color: #00474B;
     cursor: pointer;
 }
-.a10{
+.insidepercents{
     background: #00474B;
     border-radius: 5px;
     width: 117px;
@@ -177,12 +177,12 @@ gap: 14px;
     text-align: center;
     color: #FFFFFF;
 }
-.a10:hover{
+.insidepercents:hover{
     background: #9FE8DF;
     color: #00474B;
     cursor: pointer;
 }
-.a15{
+.insidepercents{
     background: #00474B;
     border-radius: 5px;
     width: 117px;
@@ -198,12 +198,12 @@ gap: 14px;
     text-align: center;
     color: #FFFFFF;
 }
-.a15:hover{
+.insidepercents:hover{
     background: #9FE8DF;
     color: #00474B;
     cursor: pointer;
 }
-.a25{
+.insidepercents{
     background: #00474B;
     border-radius: 5px;
     width: 117px;
@@ -219,13 +219,13 @@ gap: 14px;
     text-align: center;
     color: #FFFFFF;
 }
-.a25:hover{
+.insidepercents:hover{
     background: #9FE8DF;
     color: #00474B;
     cursor: pointer;
-}
+} */
 
-.a50{
+.insidepercents{
     background: #00474B;
     border-radius: 5px;
     width: 117px;
@@ -241,7 +241,7 @@ gap: 14px;
     text-align: center;
     color: #FFFFFF;
 }
-.a50:hover{
+.insidepercents:hover{
     background: #9FE8DF;
     color: #00474B;
     cursor: pointer;
@@ -290,6 +290,7 @@ font-weight: 700;
 font-size: 16px;
 line-height: 24px;
 color: #5E7A7D;
+
 }
 .bottomInput{
     width: 380px;
@@ -474,4 +475,32 @@ opacity: 0.35;
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
+}
+.duv{
+    display: flex;
+    justify-content: space-between;
+
+}
+.NumberofPeople1{
+font-family: 'Space Mono';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+
+text-align: right;
+display: none;
+color: #E17457;
+}
+@media (max-width:376px){
+    .container{
+        flex-wrap: wrap;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
