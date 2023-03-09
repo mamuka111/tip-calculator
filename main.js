@@ -13,7 +13,7 @@ let personValueInput = 0;
 
 billInput.addEventListener("input", function () {
   firstInput = billInput.value;
-  if(firstInput && customInput && personValueInput  && insidePercents){
+  if(firstInput && customInput && personValueInput){
     calculateTip()}
  const billHasnumber = billInput.value.match(/\d+/);
  if (billHasnumber) {
@@ -25,7 +25,7 @@ billInput.addEventListener("input", function () {
 
 customTipInput.addEventListener("input", function () {
   customInput = customTipInput.value;
-  if(firstInput && customInput && personValueInput && insidePercents){
+  if(firstInput && customInput && personValueInput ){
     calculateTip()}
   const billHasnumber = customTipInput.value.match(/\d+/);
   if (billHasnumber) {
@@ -37,7 +37,10 @@ customTipInput.addEventListener("input", function () {
 
 personInput.addEventListener("input", function () {
   personValueInput = personInput.value;
-  if(firstInput && customInput && personValueInput  && insidePercents){
+  if(firstInput && customInput && personValueInput ){
+    calculateTip()
+  }
+  if(firstInput && insidePercents && personValueInput ){
     calculateTip()
   }
   const billHasnumber = personInput.value.match(/\d+/);
@@ -48,12 +51,14 @@ personInput.addEventListener("input", function () {
  }
 });
 
+
+
+
 let cvladi;
 insidePercents.forEach((element) => {
  
-      // element.style.color = "black"
       console.log(element)
-     
+      
   element.addEventListener("click", function () {
     console.log(element)
     
@@ -63,11 +68,6 @@ insidePercents.forEach((element) => {
     customTipInput.value = "";
     customInput = 0;
     calculateTip();
-    // if(element.innerHTML === cvladi ){
-    //   element.style.color = "red"
-    //   console.log(cvladi)
-    //   console.log(element.innerHTML)
-    //   }
 
     element.className = "active"
     console.log(cvladi);
@@ -115,13 +115,20 @@ resetButton.addEventListener("click", function () {
 // }
 function calculateTip() {
   if (firstInput && personValueInput && !isNaN(firstInput) && !isNaN(personValueInput)) {
+    console.log(firstInput)
+    console.log(personValueInput)
+    console.log(firstInput)
+    
     let tipPercent = 0;
+    
     if (customInput) {
       tipPercent = customInput;
     } else {
       tipPercent = parseFloat(tipAmount.innerHTML);
     }
-    let tipAmountValue =
+    console.log( tipAmount.innerHTML)
+    console.log(tipPercent)
+    let tipAmountValue = 
       (firstInput * (tipPercent / 100)) / personValueInput;
     let totalBillValue = (firstInput / personValueInput) + tipAmountValue;
 
@@ -130,7 +137,9 @@ function calculateTip() {
   } else {
     tipAmount.innerHTML = "$0.00";
     totalBill.innerHTML = "$0.00";
+    
   }
+  
 }
 console.log("firstInput:", firstInput, "personValueInput:", personValueInput);
 
