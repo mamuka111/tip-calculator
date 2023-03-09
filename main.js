@@ -21,6 +21,10 @@ billInput.addEventListener("input", function () {
 } else {
   resetButton.style.backgroundColor = '#0D686D';
 }
+if(personInput.value == 0 ){
+  tipAmount.innerHTML = "$0.00"
+  totalBill.innerHTML = "$0.00"
+}
 });
 
 customTipInput.addEventListener("input", function () {
@@ -33,6 +37,15 @@ customTipInput.addEventListener("input", function () {
  } else {
    resetButton.style.backgroundColor = '#0D686D';
  }
+ cvladi = 0;
+ if(button){
+ button.className ="insidepercents"
+ }
+if(personInput.value == 0 ){
+  tipAmount.innerHTML = "$0.00"
+  totalBill.innerHTML = "$0.00"
+}
+// console.log(customInput)
 });
 
 personInput.addEventListener("input", function () {
@@ -40,7 +53,7 @@ personInput.addEventListener("input", function () {
   if(firstInput && customInput && personValueInput ){
     calculateTip()
   }
-  if(firstInput && insidePercents && personValueInput ){
+  if(firstInput && cvladi && personValueInput ){
     calculateTip()
   }
   const billHasnumber = personInput.value.match(/\d+/);
@@ -49,11 +62,15 @@ personInput.addEventListener("input", function () {
  } else {
    resetButton.style.backgroundColor = '#0D686D';
  }
+ if(personValueInput == 0){
+  tipAmount.innerHTML = "$0.00"
+  totalBill.innerHTML = "$0.00"
+ }
 });
 
 
 
-
+let button;
 let cvladi;
 insidePercents.forEach((element) => {
  
@@ -61,7 +78,8 @@ insidePercents.forEach((element) => {
       
   element.addEventListener("click", function () {
     console.log(element)
-    
+
+    button =  element;
     cvladi = element.innerHTML
     tipAmount.innerHTML = element.innerHTML;
     totalBill.innerHTML = element.innerHTML;
@@ -94,6 +112,8 @@ resetButton.addEventListener("click", function () {
  if(billInput.value !== billHasNoNumber){
   resetButton.style.backgroundColor = "#0D686D"
  }
+ cvladi = 0;
+ button.className ="insidepercents"
 });
 
 // function calculateTip() {
@@ -124,9 +144,9 @@ function calculateTip() {
     if (customInput) {
       tipPercent = customInput;
     } else {
-      tipPercent = parseFloat(tipAmount.innerHTML);
+      tipPercent = parseFloat(cvladi);
     }
-    console.log( tipAmount.innerHTML)
+    console.log( tipAmount.innerHTMl)
     console.log(tipPercent)
     let tipAmountValue = 
       (firstInput * (tipPercent / 100)) / personValueInput;
@@ -139,7 +159,10 @@ function calculateTip() {
     totalBill.innerHTML = "$0.00";
     
   }
-  
+  if(personInput.value == 0 ){
+    tipAmount.innerHTML = "$0.00";
+    totalBill.innerHTML = "$0.00";
+  }
 }
 console.log("firstInput:", firstInput, "personValueInput:", personValueInput);
 
