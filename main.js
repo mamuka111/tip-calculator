@@ -13,7 +13,8 @@ let personValueInput = 0;
 
 billInput.addEventListener("input", function () {
   firstInput = billInput.value;
-  calculateTip();
+  if(firstInput && customInput && personValueInput  && insidePercents){
+    calculateTip()}
  const billHasnumber = billInput.value.match(/\d+/);
  if (billHasnumber) {
   resetButton.style.backgroundColor = '#9FE8DF';
@@ -24,7 +25,8 @@ billInput.addEventListener("input", function () {
 
 customTipInput.addEventListener("input", function () {
   customInput = customTipInput.value;
-  calculateTip();
+  if(firstInput && customInput && personValueInput && insidePercents){
+    calculateTip()}
   const billHasnumber = customTipInput.value.match(/\d+/);
   if (billHasnumber) {
    resetButton.style.backgroundColor = '#9FE8DF';
@@ -35,7 +37,9 @@ customTipInput.addEventListener("input", function () {
 
 personInput.addEventListener("input", function () {
   personValueInput = personInput.value;
-  calculateTip();
+  if(firstInput && customInput && personValueInput  && insidePercents){
+    calculateTip()
+  }
   const billHasnumber = personInput.value.match(/\d+/);
   if (billHasnumber) {
    resetButton.style.backgroundColor = '#9FE8DF';
@@ -92,8 +96,25 @@ resetButton.addEventListener("click", function () {
  }
 });
 
+// function calculateTip() {
+//   if (firstInput && personValueInput) {
+//     let tipPercent = 0;
+//     if (customInput) {
+//       tipPercent = customInput;
+//     } else {
+//       tipPercent = parseFloat(tipAmount.innerHTML);
+//     }
+
+//     let tipAmountValue =
+//       (firstInput * (tipPercent / 100)) / personValueInput;
+//     let totalBillValue = (firstInput / personValueInput) + tipAmountValue;
+
+//     tipAmount.innerHTML = "$" + tipAmountValue.toFixed(2);
+//     totalBill.innerHTML = "$" + totalBillValue.toFixed(2);
+//   }
+// }
 function calculateTip() {
-  if (firstInput && personValueInput) {
+  if (firstInput && personValueInput && !isNaN(firstInput) && !isNaN(personValueInput)) {
     let tipPercent = 0;
     if (customInput) {
       tipPercent = customInput;
@@ -106,8 +127,12 @@ function calculateTip() {
 
     tipAmount.innerHTML = "$" + tipAmountValue.toFixed(2);
     totalBill.innerHTML = "$" + totalBillValue.toFixed(2);
+  } else {
+    tipAmount.innerHTML = "$0.00";
+    totalBill.innerHTML = "$0.00";
   }
 }
+console.log("firstInput:", firstInput, "personValueInput:", personValueInput);
 
 
 
