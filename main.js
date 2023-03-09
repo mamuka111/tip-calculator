@@ -5,6 +5,7 @@ const insidePercents = document.querySelectorAll(".insidepercents");
 const tipAmount = document.querySelector(".p3");
 const totalBill = document.querySelector(".p6");
 const resetButton = document.querySelector(".reset");
+const ressetP = document.querySelector(".p7")
 
 let firstInput = 0;
 let customInput = 0;
@@ -13,16 +14,34 @@ let personValueInput = 0;
 billInput.addEventListener("input", function () {
   firstInput = billInput.value;
   calculateTip();
+ const billHasnumber = billInput.value.match(/\d+/);
+ if (billHasnumber) {
+  resetButton.style.backgroundColor = '#9FE8DF';
+} else {
+  resetButton.style.backgroundColor = '#0D686D';
+}
 });
 
 customTipInput.addEventListener("input", function () {
   customInput = customTipInput.value;
   calculateTip();
+  const billHasnumber = customTipInput.value.match(/\d+/);
+  if (billHasnumber) {
+   resetButton.style.backgroundColor = '#9FE8DF';
+ } else {
+   resetButton.style.backgroundColor = '#0D686D';
+ }
 });
 
 personInput.addEventListener("input", function () {
   personValueInput = personInput.value;
   calculateTip();
+  const billHasnumber = personInput.value.match(/\d+/);
+  if (billHasnumber) {
+   resetButton.style.backgroundColor = '#9FE8DF';
+ } else {
+   resetButton.style.backgroundColor = '#0D686D';
+ }
 });
 
 let cvladi;
@@ -67,6 +86,10 @@ resetButton.addEventListener("click", function () {
   firstInput = 0;
   customInput = 0;
   personValueInput = 0;
+  let billHasNoNumber = billInput.value.match(/\d+/);
+ if(billInput.value !== billHasNoNumber){
+  resetButton.style.backgroundColor = "#0D686D"
+ }
 });
 
 function calculateTip() {
